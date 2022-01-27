@@ -1,12 +1,54 @@
-# Getting Started with Create React App
+# Trivia App (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [Sumary](#sumary)
+- [Dependencies](#dependencies)
+  - [Configuring Environment](#configuring-environment)
+  - [Installing Dependencies](#installing-dependencies)
+- [Running on your Machine](#running-on-your-machine)
 
-In the project directory, you can run:
+## Sumary
 
-### `yarn start`
+WIP
+
+[↩ Back to top](#trivia-app-frontend) <br/>
+
+---
+
+## Dependencies
+
+### Configuring Environment
+
+In case you don't have node and npm installed, you can download it directly from [Node Website](https://nodejs.org/en/download/).
+
+After installing node, install `yarn` with the following command
+
+```bash
+$ npm install --global yarn
+```
+
+[↩ Back to top](#trivia-app-frontend) <br/>
+
+---
+
+### Installing Dependencies
+
+With Node and yarn installed, open a terminal within the project folder and run the following command to install all dependencies.
+
+```bash
+$ yarn install
+```
+
+[↩ Back to top](#trivia-app-frontend) <br/>
+
+---
+
+## Running on your Machine
+
+Once you've installed all dependencies, the following commands will be available.
+
+### `yarn dev`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
