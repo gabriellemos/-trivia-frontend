@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Button = styled.button`
+  cursor: pointer;
   color: var(--text-primary);
   box-shadow: var(--shadow);
   background: var(--button-background);
@@ -14,4 +15,19 @@ export const Button = styled.button`
   &:active {
     background: var(--button-active);
   }
+
+  &:disabled {
+    cursor: default;
+    background: var(--button-disabled);
+  }
+
+  &.selected {
+    color: var(--right-answer);
+  }
+`
+
+export const IconButton = styled(Button)`
+  border: none;
+  border-radius: 50%;
+  padding: 6px 16px;
 `

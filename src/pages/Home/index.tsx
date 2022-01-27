@@ -1,11 +1,16 @@
-import { useMemo } from 'react'
+import { useMemo, useContext } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
 
 import { Container } from './Styles'
 import * as Card from '../../components/Card'
 import { Button } from '../../components/Button'
+import Configuration from '../../components/Configuration'
+import withConfigurationContext, {
+  ConfigurationContext
+} from '../../utils/withConfigurationContext'
 
 const Home = () => {
+  const { amount } = useContext(ConfigurationContext)
   const [searchParams] = useSearchParams()
   const navigate = useNavigate()
 
@@ -20,6 +25,7 @@ const Home = () => {
           <p className="title">
             welcome to the <span className="emphasis">Trivia Challenge!</span>
           </p>
+          <Configuration className="header__action" />
         </Card.Header>
         <Card.Body>
           <p className="summary">
@@ -28,7 +34,9 @@ const Home = () => {
           </p>
         </Card.Body>
         <Card.Footer>
-          <Button onClick={() => navigate('/challenge')}>BEGIN</Button>
+          <Button onClick={() => navigate(`/challenge?amount=${amount}`)}>
+            BEGIN
+          </Button>
         </Card.Footer>
       </Card.Container>
       {renderError && (
@@ -38,4 +46,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default withConfigurationContext(Home)

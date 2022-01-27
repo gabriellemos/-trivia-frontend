@@ -37,9 +37,10 @@ const Question = <P extends object>({
       <Card.Container>
         <p className="question__content">{value.question}</p>
         <div className="question__options">
-          {options.map((option) => {
+          {options.map((option, index) => {
             return (
               <Button
+                key={index}
                 className="question__item"
                 onClick={() => onResponse(option.correct)}
               >

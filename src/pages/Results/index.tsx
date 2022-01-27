@@ -39,7 +39,7 @@ const Results = () => {
             {questions.map((question, index) => {
               const answer = results[index] ? '✓' : '✗'
               return (
-                <Result isCorrect={results[index]}>
+                <Result key={question._id} isCorrect={results[index]}>
                   <td className="result__answer">{answer}</td>
                   <td className="result__content">{question.question}</td>
                 </Result>
