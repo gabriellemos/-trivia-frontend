@@ -13,7 +13,7 @@ const withTriviaQuestions = <P extends object>(
 
     useEffect(() => {
       // TODO: Update amount and type will come from URL
-      TriviaService.get({ amount: 5, type: TriviaType.MULTIPLE })
+      TriviaService.getTrivia({ amount: 5, type: TriviaType.MULTIPLE })
         .then(({ data }) => {
           setQuestions(data.results)
         })
